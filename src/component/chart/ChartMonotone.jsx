@@ -1,8 +1,8 @@
 import React from "react"
-import "./Chart.css"
+import "./ChartMonotone.css"
 import {ResponsiveContainer, LineChart, XAxis, YAxis, Line, Tooltip, CartesianGrid} from "recharts";
 
-export default function Chart({ title, data, dataKey, grid }){
+export default function ChartMonotone({ title, data, dataKey, grid }){
 
     return(
         <div className="chart">
