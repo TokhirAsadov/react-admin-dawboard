@@ -5,11 +5,11 @@ export const userData = [
     },
     {
         name: 'Feb',
-        "Active User": 3987,
+        "Active User":8522,
     },
     {
         name: 'Mar',
-        "Active User": 4251,
+        "Active User": 4871,
     },
     {
         name: 'Apr',
@@ -21,11 +21,11 @@ export const userData = [
     },
     {
         name: 'Jun',
-        "Active User": 3904,
+        "Active User": 1004,
     },
     {
         name: 'Jul',
-        "Active User": 3870,
+        "Active User": 7570,
     },
     {
         name: 'Agu',
@@ -37,7 +37,7 @@ export const userData = [
     },
     {
         name: 'Oct',
-        "Active User": 1407,
+        "Active User": 8407,
     },
     {
         name: 'Nov',
