@@ -1,0 +1,142 @@
+.addNewProduct{
+    width: 50%;
+    display: flex;
+    background-color: #bdb9b9 !important;
+    border-radius: 5px;
+    padding: 10px 50px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    padding: 10px 0px!important;
+    font-size: 24px;
+}
+.icon_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.add_product_icon{
+    color: #6b6161;
+    font-size: 24px!important;
+    font-weight: bold;
+    vertical-align: center;
+}
+.title_value{
+    font-weight: 400;
+}
+
+.row{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.crud_item,
+crud_picture{
+    display: flex;
+    flex-direction: column;
+}
+
+.crud_item label{
+    font-size: 18px;
+    margin: 5px 5px 5px 0px;
+}
+.crud_item input, .crud_item select{
+    width: 200px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+}
+input::placeholder,
+select::placeholder,
+textarea::placeholder{
+    letter-spacing: 1.1px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+}
+.description_label{
+    display: block;
+}
+textarea{
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+}
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+}
+.product_details,
+.product_pictures{
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b4afaf;
+    padding: 2px 8px;
+}
+.product_detail,
+.product_picture{
+    width: 90%;
+    padding: 3px 10px;
+    margin: 4px 0;
+    background-color: #bdb9b9;
+}
+.product_detail_label{
+    font-size: 14px!important;
+}
+.product_detail_item{
+    width: 150px!important;
+}
+select:optional{
+    letter-spacing: 1.1px;
+    color: #757575;
+}
+.btn_detail_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+.btn_add_product_detail{
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(limegreen,lime);
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    line-height: 24px;
+    font-size: 24px;
+    color: white;
+    transition: all linear 0.6s;
+    cursor: pointer;
+}
+.btn_add_product_detail:hover{
+    transform: scale(1.1) rotate(360deg);
+    background: radial-gradient(lime,limegreen);
+}
+.product_pictures{
+    margin-top: 10px;
+}
