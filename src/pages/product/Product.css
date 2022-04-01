@@ -1,0 +1,9 @@
+.product{
+    flex: 4;
+    max-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(219, 221, 222, 0.98) !important;
+}
