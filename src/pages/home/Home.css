@@ -3,7 +3,7 @@
     padding-top: 10px;
 }
 .homeWidgets{
-    width: 100%;
+    min-width: 951px;
     display: flex;
     margin: 20px;
 }
