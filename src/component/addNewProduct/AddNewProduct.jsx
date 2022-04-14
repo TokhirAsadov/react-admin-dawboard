@@ -10,58 +10,36 @@ const AddNewProduct = () => {
         {id:3,value:"x"}
     ];
 
-    const detailMeturement = {
+    const detailMeasurement = {
       id: "",
-      meturementValue: ""
+      measurementValue: ""
     };
 
     const detail = {
         id: "",
         detail: "",
         value: "",
-        detailMeturement: detailMeturement
+        detailMeasurement: detailMeasurement
     }
 
-    const [meturements, setMeturements] = useState(data);
+    const [measurements, setMeasurements] = useState(data);
     const [isAddBtn,setIsAddBtn] = useState(false);
-    const [details,setDetails] = useState([detail]);
+    const [details,setDetails] = useState([ {
+        id: "",
+        detail: "",
+        value: "",
+        detailMeasurement: detailMeasurement
+    }]);
 
     const addDetail = (e) => {
         e.preventDefault();
-
         /**
          *
          * axios ni ulash kerak...............................
          *
          **/
-
-        details.push(detail);
-        console.log(details);
+        setDetails([...details,detail]);
     }
-
-    // const productDetail = () => {
-    //      <div className="product_detail">
-    //         <div className="row">
-    //             <span className="crud_item">
-    //                  <label className="product_detail_label" htmlFor="detail">Product Detail:</label>
-    //                  <input className="product_detail_item" id="detail" type="text" placeholder="Enter Detail"/>
-    //             </span>
-    //             <span className="crud_item">
-    //                   <label className="product_detail_label" htmlFor="value">Product Value:</label>
-    //                   <input className="product_detail_item" id="value" type="text" placeholder="Enter Value"/>
-    //             </span>
-    //             <span className="crud_item">
-    //                   <label className="product_detail_label" htmlFor="meturment">Product Meturment:</label>
-    //                   <select className="product_detail_item" id="meturment" name="mashurment" >
-    //                       <option value="0">Select meturment...</option>
-    //                       <option value="1">1</option>
-    //                       <option value="2">2</option>
-    //                       <option value="3">3</option>
-    //                   </select>
-    //             </span>
-    //         </div>
-    //     </div>;
-    // }
 
     return (
         <div className={"addNewProduct"}>
@@ -115,10 +93,11 @@ const AddNewProduct = () => {
                           placeholder={"Enter product description..."}>
                       </textarea>
                   </div>
-                    <div className="product_details">
+                  <div className="product_details">
                       {
-                          details.map(det =>
-                              <div className="product_detail" key={det}>
+                          details ? details.map(
+                              det =>
+                                <div className="product_detail" key={det}>
                                   <div className="row">
                                       <span className="crud_item">
                                           <label className="product_detail_label" htmlFor={"detail" + det.id}>Product Detail:</label>
@@ -129,9 +108,9 @@ const AddNewProduct = () => {
                                           <input className="product_detail_item" id={"value" + det.id} type="text" placeholder="Enter Value"/>
                                       </span>
                                       <span className="crud_item">
-                                          <label className="product_detail_label" htmlFor={"meturment" + det.id}>Product Meturment:</label>
-                                          <select className="product_detail_item" id={"meturment" + det.id} name="mashurment" >
-                                              <option value="0">Select meturment...</option>
+                                          <label className="product_detail_label" htmlFor={"measurment" + det.id}>Product Meturment:</label>
+                                          <select className="product_detail_item" id={"measurment" + det.id} name="measurment" >
+                                              <option value="0">Select measurment...</option>
                                               <option value="1">1</option>
                                               <option value="2">2</option>
                                               <option value="3">3</option>
@@ -139,15 +118,16 @@ const AddNewProduct = () => {
                                       </span>
                                   </div>
                               </div>
-                          )
+                              )
+                                :
+                              <h4>Not found product detail</h4>
                       }
-
-
 
                       <div className="btn_detail_wrapper">
                         <button onClick={addDetail} className="btn_add_product_detail" >+</button>
                       </div>
                   </div>
+
                     <div className="product_pictures">
                         {/**
                             * picture add funksiyasini qiliw kk, o`zgaruvchi array kk
