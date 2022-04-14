@@ -41,6 +41,12 @@ const AddNewProduct = () => {
         setDetails([...details,detail]);
     }
 
+    const removeDetail = (e) => {
+        e.preventDefault();
+
+        window.confirm("Do you remove detail?") ? alert("Removed successfully") : console.log("do not remove item");
+    }
+
     return (
         <div className={"addNewProduct"}>
             <div className="container">
@@ -94,6 +100,12 @@ const AddNewProduct = () => {
                       </textarea>
                   </div>
                   <div className="product_details">
+                      <div className="product_detail_title">
+                          <span className={"icon_wrapper_detail"}>
+                            <AddBox className={"add_product_detail_icon"}/>
+                          </span>
+                          Product Details...
+                      </div>
                       {
                           details ? details.map(
                               det =>
@@ -116,6 +128,9 @@ const AddNewProduct = () => {
                                               <option value="3">3</option>
                                           </select>
                                       </span>
+                                      <div className="btn_detail_wrapper">
+                                          <button onClick={removeDetail} className="btn_remove_product_detail" >-</button>
+                                      </div>
                                   </div>
                               </div>
                               )
@@ -132,6 +147,14 @@ const AddNewProduct = () => {
                         {/**
                             * picture add funksiyasini qiliw kk, o`zgaruvchi array kk
                         **/}
+
+                        <div className="product_detail_title">
+                          <span className={"icon_wrapper_detail"}>
+                            <AddBox className={"add_product_detail_icon"}/>
+                          </span>
+                            Product Picture...
+                        </div>
+
                         <div className="product_picture">
                             <div className="row">
                                 <span className="crud_picture">

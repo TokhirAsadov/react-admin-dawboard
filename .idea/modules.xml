@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/react-admin-dawboard.iml" filepath="$PROJECT_DIR$/.idea/react-admin-dawboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/react-admin-dawboard.iml" filepath="$PROJECT_DIR$/react-admin-dawboard.iml" />
     </modules>
   </component>
 </project>
